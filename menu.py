@@ -6,6 +6,10 @@ from UsersGroups import delete_group
 from PasswordMgm import password_change
 from PasswordMgm import block_access
 from PasswordMgm import unblock_access
+from FileFolMgm import file_permission
+from FileFolMgm import folder_permission
+from FileFolMgm import change_filepermission
+from FileFolMgm import change_folderpermission
 
 print("############################################################")
 print("Project Owner : Nader Sipahy")
@@ -72,6 +76,20 @@ elif option == "3":
     print("Option 3 : Changer les permissions d'un fichier")
     print("Option 4 : Changer les permissions d'un dossier")
     print("Option 5 : Quitter")
+    subOption = input("Veuillez sélectionner l'une des options: ")
+    if subOption == "1":
+        file_permission()
+    elif subOption == "2":
+        folder_permission()
+    elif subOption == "3":
+        change_filepermission()
+    elif subOption == "4":
+        change_folderpermission()
+    elif subOption == "5":
+        print("Quitter")
+    else:
+        print ("Option invalide")    
+
 
 elif option == "4":
     print("Option 1 : Afficher le statut d'un service")
