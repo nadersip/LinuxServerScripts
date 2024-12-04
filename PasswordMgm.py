@@ -1,7 +1,3 @@
-#Option 1 : Changement de mot de passe
-#Option 2 : Bloquer l'accès
-#Option 3 : Quitter
-
 import os
 
 
@@ -12,4 +8,8 @@ def password_change():
 def block_access():
     user = input("Veuillez saisir le nom du user pour blocker l'access: ")
     blAccess = os.system("passwd -l " + user)
+
+def unblock_access():
+    user = input("Veuillez saisir le nom du user pour deblocker l'access: ")
+    blAccess = os.system("passwd -u " + user)   
 

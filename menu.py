@@ -3,6 +3,9 @@ from UsersGroups import creat_user
 from UsersGroups import creat_group
 from UsersGroups import delete_user
 from UsersGroups import delete_group
+from PasswordMgm import password_change
+from PasswordMgm import block_access
+from PasswordMgm import unblock_access
 
 print("############################################################")
 print("Project Owner : Nader Sipahy")
@@ -45,11 +48,23 @@ if option == "1":
     else:
         print ("Option invalide")
 
-        
+
 elif option == "2":
     print("Option 1 : Changement de mot de passe")
     print("Option 2 : Bloquer l'accès")
-    print("Option 3 : Quitter")
+    print("Option 3 : Debloquer l'accès")
+    print("Option 4 : Quitter")
+    subOption = input("Veuillez sélectionner l'une des options: ")
+    if subOption == "1":
+        password_change()
+    elif subOption == "2":
+        block_access()
+    elif subOption == "3":
+        unblock_access()
+    elif subOption == "4":
+        print("Quitter")
+    else:
+        print ("Option invalide")
 
 elif option == "3":
     print("Option 1 : Afficher les permissions d'un fichier")
