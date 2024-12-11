@@ -10,6 +10,11 @@ from FileFolMgm import file_permission
 from FileFolMgm import folder_permission
 from FileFolMgm import change_filepermission
 from FileFolMgm import change_folderpermission
+from GestionService import service_status
+from GestionService import service_start
+from GestionService import service_stop
+from GestionService import service_restart
+
 
 print("############################################################")
 print("Project Owner : Nader Sipahy")
@@ -97,6 +102,19 @@ elif option == "4":
     print("Option 3 : Arrêter un service")
     print("Option 4 : Redémarrer un service")
     print("Option 5 : Quitter")
+    subOption = input("Veuillez sélectionner l'une des options: ")
+    if subOption == "1":
+        service_status()
+    elif subOption == "2":
+        service_start()
+    elif subOption == "3":
+        service_stop()
+    elif subOption == "4":
+        service_restart()
+    elif subOption == "5":
+        print("Quitter")
+    else:
+        print ("Option invalide") 
 
 elif option == "5":
     print("Option 1 : Afficher les processus")
