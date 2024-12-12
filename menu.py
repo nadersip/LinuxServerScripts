@@ -14,6 +14,8 @@ from GestionService import service_status
 from GestionService import service_start
 from GestionService import service_stop
 from GestionService import service_restart
+from ProcessusMgm import affiche_processus
+from ProcessusMgm import stop_processus
 
 
 print("############################################################")
@@ -120,9 +122,15 @@ elif option == "5":
     print("Option 1 : Afficher les processus")
     print("Option 2 : Arrêter un processus")
     print("Option 3 : Quitter")
-
-elif option == "6":
-    print("Quitter")
-
+    subOption = input("Veuillez sélectionner l'une des options: ")
+    if subOption == "1":
+        affiche_processus()
+    elif subOption == "2":
+        affiche_processus()
+        stop_processus()
+    elif subOption == "3":
+        print("Quitter")
+    else:
+        print ("Option invalide") 
 else :
     print("Option invalide")
