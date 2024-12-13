@@ -8,4 +8,6 @@ C'est un projet en cours de développement, qui sera soutenu par le professeur e
 
 Si vous souhaitez faire des recommandations, n'hésitez pas à créer un ticket afin que nous puissions évaluer votre demande et vous aider.
 
+La version v1.0.0 est prête
+
 Merci.
