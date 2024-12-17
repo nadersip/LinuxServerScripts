@@ -22,3 +22,27 @@ def service_restart():
     serviceRestart = os.system("systemctl restart " + nameService)
     serviceStatus = os.system("systemctl status " + nameService)
     print(serviceStatus)
+
+#English version
+
+def service_status_en():
+    nameService = input("Please enter the name of the service whose status you want to check : ")
+    serviceStatus = os.system("systemctl status " + nameService)
+    print(serviceStatus)
+
+def service_start_en():
+    nameService = input("Please enter the name of the service you want to start : ")
+    serviceStart = os.system("systemctl start " + nameService)
+    serviceStatus = os.system("systemctl status " + nameService)
+    print(serviceStatus)
+
+def service_stop_en():
+    nameService = input("Please enter the name of the service you want to stop : ")
+    serviceStop = os.system("systemctl stop " + nameService)
+    serviceStatus = os.system("systemctl status " + nameService)
+    print(serviceStatus)
+
+def service_restart_en():
+    nameService = input("Please enter the name of the service you want to restart : ")
+    serviceRestart = os.system("systemctl restart " + nameService)
+    serviceStatus = os.system("systemctl status " + nameService)

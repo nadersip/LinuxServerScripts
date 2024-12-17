@@ -1,21 +1,10 @@
 # Welcome to the scripting project for the Linux Server course.
-from UsersGroups import creat_user
-from UsersGroups import creat_group
-from UsersGroups import delete_user
-from UsersGroups import delete_group
-from PasswordMgm import password_change
-from PasswordMgm import block_access
-from PasswordMgm import unblock_access
-from FileFolMgm import file_permission
-from FileFolMgm import folder_permission
-from FileFolMgm import change_filepermission
-from FileFolMgm import change_folderpermission
-from GestionService import service_status
-from GestionService import service_start
-from GestionService import service_stop
-from GestionService import service_restart
-from ProcessusMgm import affiche_processus
-from ProcessusMgm import stop_processus
+from UsersGroups import creat_user, creat_group, delete_user, delete_group, creat_user_en, creat_group_en, delete_user_en, delete_group_en
+from PasswordMgm import password_change, block_access, unblock_access, password_change_en, block_access_en, unblock_access_en
+from FileFolMgm import file_permission, folder_permission, change_filepermission, change_folderpermission, file_permission_en, folder_permission_en, change_filepermission_en, change_folderpermission_en
+from GestionService import service_status, service_start, service_stop, service_restart, service_status_en, service_start_en ,service_stop_en ,service_restart_en
+from ProcessusMgm import affiche_processus, stop_processus, affiche_processus_en, stop_processus_en
+
 
 
 print("############################################################")
@@ -168,13 +157,13 @@ while True:
                 print("Option 5 : Exit")
                 subOption = input("Please select one of the options : ")
                 if subOption == "1":
-                    creat_user()
+                    creat_user_en()
                 elif subOption == "2":
-                    creat_group()
+                    creat_group_en()
                 elif subOption == "3":
-                    delete_user()
+                    delete_user_en()
                 elif subOption == "4":
-                    delete_group()
+                    delete_group_en()
                 elif subOption == "5":
                     print("Exit")
                     break
@@ -189,11 +178,11 @@ while True:
                 print("Option 4 : Exit")
                 subOption = input("Please select one of the options : ")
                 if subOption == "1":
-                    password_change()
+                    password_change_en()
                 elif subOption == "2":
-                    block_access()
+                    block_access_en()
                 elif subOption == "3":
-                    unblock_access()
+                    unblock_access_en()
                 elif subOption == "4":
                     print("Exit")
                     break
@@ -208,13 +197,13 @@ while True:
                 print("Option 5 : Exit")
                 subOption = input("Please select one of the options : ")
                 if subOption == "1":
-                    file_permission()
+                    file_permission_en()
                 elif subOption == "2":
-                    folder_permission()
+                    folder_permission_en()
                 elif subOption == "3":
-                    change_filepermission()
+                    change_filepermission_en()
                 elif subOption == "4":
-                    change_folderpermission()
+                    change_folderpermission_en()
                 elif subOption == "5":
                     print("Exit")
                     break
@@ -230,13 +219,13 @@ while True:
                 print("Option 5 : Exit")
                 subOption = input("Please select one of the options : ")
                 if subOption == "1":
-                    service_status()
+                    service_status_en()
                 elif subOption == "2":
-                    service_start()
+                    service_start_en()
                 elif subOption == "3":
-                    service_stop()
+                    service_stop_en()
                 elif subOption == "4":
-                    service_restart()
+                    service_restart_en()
                 elif subOption == "5":
                     print("Quitter")
                     break
@@ -249,12 +238,13 @@ while True:
                 print("Option 3 : Exit")
                 subOption = input("Please select one of the options : ")
                 if subOption == "1":
-                    affiche_processus()
+                    affiche_processus_en()
                 elif subOption == "2":
-                    affiche_processus()
+                    affiche_processus_en()
                     stop_processus()
                 elif subOption == "3":
                     print("Exit")
+                    break
                 else:
                     print ("Invalid option")
             elif option == "6":
