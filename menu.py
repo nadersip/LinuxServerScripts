@@ -1,5 +1,5 @@
 # Welcome to the scripting project for the Linux Server course.
-from UsersGroups import creat_user, creat_group, delete_user, delete_group, creat_user_en, creat_group_en, delete_user_en, delete_group_en
+from UsersGroups import creat_user, creat_group, delete_user, delete_group, creat_user_en, creat_group_en, delete_user_en, delete_group_en, get_user
 from PasswordMgm import password_change, block_access, unblock_access, password_change_en, block_access_en, unblock_access_en
 from FileFolMgm import file_permission, folder_permission, change_filepermission, change_folderpermission, file_permission_en, folder_permission_en, change_filepermission_en, change_folderpermission_en
 from GestionService import service_status, service_start, service_stop, service_restart, service_status_en, service_start_en ,service_stop_en ,service_restart_en
@@ -39,7 +39,8 @@ while True:
                 print("Option 2 : Créer un groupe")
                 print("Option 3 : Supprimer un utilisateur")
                 print("Option 4 : Supprimer un groupe")
-                print("Option 5 : Quitter")
+                print("Option 5 : Liste d'utilisateurs")
+                print("Option 6 : Quitter")
                 subOption = input("Veuillez sélectionner l'une des options: ")
                 if subOption == "1":
                     creat_user()
@@ -50,6 +51,8 @@ while True:
                 elif subOption == "4":
                     delete_group()
                 elif subOption == "5":
+                    get_user()
+                elif subOption == "6":
                     print("Quitter")
                     break
                 else:

@@ -1,7 +1,7 @@
 import os
 
 def get_user():
-    users = os.system("cat /etc/group")
+    users = os.system("cat /etc/passwd | awk -F: '{print $1}' ")
     print(users)
 
 def get_groups():
