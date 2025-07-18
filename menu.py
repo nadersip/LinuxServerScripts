@@ -157,7 +157,8 @@ while True:
                 print("Option 2 : Create a group")
                 print("Option 3 : Delete a user")
                 print("Option 4 : Delete a group")
-                print("Option 5 : Exit")
+                print("Option 5 : User list")
+                print("Option 6 : Exit")
                 subOption = input("Please select one of the options : ")
                 if subOption == "1":
                     creat_user_en()
@@ -168,6 +169,8 @@ while True:
                 elif subOption == "4":
                     delete_group_en()
                 elif subOption == "5":
+                    get_user()
+                elif subOption == "6":
                     print("Exit")
                     break
                 else:
