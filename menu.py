@@ -4,6 +4,7 @@ from PasswordMgm import password_change, block_access, unblock_access, password_
 from FileFolMgm import file_permission, folder_permission, change_filepermission, change_folderpermission, file_permission_en, folder_permission_en, change_filepermission_en, change_folderpermission_en
 from GestionService import service_status, service_start, service_stop, service_restart, service_status_en, service_start_en ,service_stop_en ,service_restart_en
 from ProcessusMgm import affiche_processus, stop_processus, affiche_processus_en, stop_processus_en
+from appMgm import app_installation, app_deletion, system_update
 
 
 
@@ -147,7 +148,8 @@ while True:
         print("Option 3 : Management of Folder and File Permissions")
         print("Option 4 : Service Management")
         print("Option 5 : Process Management")
-        print("Option 6 : Exit")
+        print("Option 6 : System Updates and Application/Tool Management")
+        print("Option 7 : Exit")
 
         option = input("Please select one of the options:")
 
@@ -254,6 +256,23 @@ while True:
                 else:
                     print ("Invalid option")
             elif option == "6":
+                print("Option 1 : System Updates")
+                print("Option 2 : Application or Tool Installation")
+                print("Option 3 : Application or Tool Removal")
+                print("Option 4 : Exit")
+                subOption = input("Please select one of the options : ")
+                if subOption == "1":
+                    system_update()
+                elif subOption == "2":
+                    app_installation()
+                elif subOption == "3":
+                    app_deletion()
+                elif subOption == "4":
+                    print("Exit")
+                    break
+                else:
+                    print ("Invalid option")
+            elif option == "7":
                 break
-        if option == "6":
+        if option == "7":
             break        
