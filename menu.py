@@ -5,7 +5,7 @@ from FileFolMgm import file_permission, folder_permission, change_filepermission
 from GestionService import service_status, service_start, service_stop, service_restart, service_status_en, service_start_en ,service_stop_en ,service_restart_en
 from ProcessusMgm import affiche_processus, stop_processus, affiche_processus_en, stop_processus_en
 from appMgm import app_installation, app_deletion, system_update
-
+from NmapScan import network_scan, port_scan, version_scan, os_scan, network_scan_en, port_scan_en, version_scan_en, os_scan_en
 
 
 print("############################################################")
@@ -30,7 +30,8 @@ while True:
         print("Option 3 : Gestion des permissions des dossiers et fichiers")
         print("Option 4 : Gestion des services")
         print("Option 5 : Gestion des processus")
-        print("Option 6 : Quitter")
+        print("Option 6 : Scan nmpa")
+        print("Option 7 : Quitter")
 
         option = input("Veuillez sélectionner l'une des options: ")
 
@@ -136,8 +137,27 @@ while True:
                 else:
                     print ("Option invalide")
             elif option == "6":
+                print("Option 1 : Scan les hosts sur le reseau ")
+                print("Option 2 : Scan des port d'une machine")
+                print("Option 3 : Scan les version des service des port sur une machine")
+                print("Option 4 : Scan le os d'une machine")
+                print("Option 5 : Quitter")
+                subOption = input("Veuillez sélectionner l'une des options: ")
+                if subOption == "1":
+                    network_scan()
+                elif subOption == "2":
+                    port_scan()
+                elif subOption == "3":
+                    version_scan()
+                elif subOption == "4":
+                    os_scan()                                        
+                elif subOption == "5":
+                    print("Quitter")
+                else:
+                    print ("Option invalide")
+            elif option == "7":
                 break
-        if option == "6":
+        if option == "7":
             break
    
     #English version 
