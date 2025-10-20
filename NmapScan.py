@@ -1,5 +1,26 @@
 import os
 
+def nmap_scan_menu_fr():
+    while True:
+        print("Option 1 : Scan les hosts sur le reseau ")
+        print("Option 2 : Scan des port d'une machine")
+        print("Option 3 : Scan les version des service des port sur une machine")
+        print("Option 4 : Scan le os d'une machine")
+        print("Option 5 : Quitter")
+        subOption = input("Veuillez sélectionner l'une des options: ")
+        if subOption == "1":
+            network_scan()
+        elif subOption == "2":
+            port_scan()
+        elif subOption == "3":
+            version_scan()
+        elif subOption == "4":
+            os_scan()                                        
+        elif subOption == "5":
+            print("Quitter")
+        else:
+            print ("Option invalide")
+
 def network_scan():
     network = input("Veuillez saisir le réseau à scanner avec le masque, ex. : 192.168.10.0/24 : ")
     scan = os.system("nmap -sn " + network)
@@ -22,6 +43,26 @@ def os_scan():
 
 #English version
 
+def nmap_scan_menu_en():
+    while True:
+        print("Option 1 : Scan les hosts sur le reseau ")
+        print("Option 2 : Scan des port d'une machine")
+        print("Option 3 : Scan les version des service des port sur une machine")
+        print("Option 4 : Scan le os d'une machine")
+        print("Option 5 : Quitter")
+        subOption = input("Veuillez sélectionner l'une des options: ")
+        if subOption == "1":
+            network_scan_en()
+        elif subOption == "2":
+            port_scan_en()
+        elif subOption == "3":
+            version_scan_en()
+        elif subOption == "4":
+            os_scan_en()                                        
+        elif subOption == "5":
+            print("Quitter")
+        else:
+            print ("Option invalide")
 
 def network_scan_en():
     network = input("Please enter the network to scan with mask e.g. 192.168.10.0/24 : ")

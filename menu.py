@@ -5,7 +5,7 @@ from FileFolMgm import file_folder_mgm_menu_fr, file_folder_mgm_menu_en
 from GestionService import service_mgm_menu_fr, service_mgm_menu_en
 from ProcessusMgm import processus_mgm_menu_fr, processus_mgm_menu_en
 from appMgm import app_installation, app_deletion, system_update
-from NmapScan import network_scan, port_scan, version_scan, os_scan, network_scan_en, port_scan_en, version_scan_en, os_scan_en
+from NmapScan import nmap_scan_menu_fr, nmap_scan_menu_en
 
 
 print("############################################################")
@@ -52,24 +52,7 @@ while True:
                 processus_mgm_menu_fr()
 
             elif option == "6":
-                print("Option 1 : Scan les hosts sur le reseau ")
-                print("Option 2 : Scan des port d'une machine")
-                print("Option 3 : Scan les version des service des port sur une machine")
-                print("Option 4 : Scan le os d'une machine")
-                print("Option 5 : Quitter")
-                subOption = input("Veuillez sélectionner l'une des options: ")
-                if subOption == "1":
-                    network_scan()
-                elif subOption == "2":
-                    port_scan()
-                elif subOption == "3":
-                    version_scan()
-                elif subOption == "4":
-                    os_scan()                                        
-                elif subOption == "5":
-                    print("Quitter")
-                else:
-                    print ("Option invalide")
+                nmap_scan_menu_fr()
             elif option == "7":
                 break
         if option == "7":
@@ -105,22 +88,8 @@ while True:
                 processus_mgm_menu_en
                 
             elif option == "6":
-                print("Option 1 : System Updates")
-                print("Option 2 : Application or Tool Installation")
-                print("Option 3 : Application or Tool Removal")
-                print("Option 4 : Exit")
-                subOption = input("Please select one of the options : ")
-                if subOption == "1":
-                    system_update()
-                elif subOption == "2":
-                    app_installation()
-                elif subOption == "3":
-                    app_deletion()
-                elif subOption == "4":
-                    print("Exit")
-                    break
-                else:
-                    print ("Invalid option")
+                nmap_scan_menu_en
+                
             elif option == "7":
                 break
         if option == "7":
