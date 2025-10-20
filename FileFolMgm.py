@@ -1,5 +1,27 @@
 import os
 
+def file_folder_mgm_menu_fr():
+    while True:
+        print("Option 1 : Afficher les permissions d'un fichier")
+        print("Option 2 : Afficher les permissions d'un dossier")
+        print("Option 3 : Changer les permissions d'un fichier")
+        print("Option 4 : Changer les permissions d'un dossier")
+        print("Option 5 : Quitter")
+        subOption = input("Veuillez sélectionner l'une des options: ")
+        if subOption == "1":
+            file_permission()
+        elif subOption == "2":
+            folder_permission()
+        elif subOption == "3":
+            change_filepermission()
+        elif subOption == "4":
+            change_folderpermission()
+        elif subOption == "5":
+            print("Quitter")
+            break
+        else:
+            print ("Option invalide")   
+
 def file_permission():
     fileName = input("Veuillez saisir le nom du fichier : ")
     fileLocation = input("Veuillez saisir le chemein du fichier : ")
@@ -41,7 +63,29 @@ def change_folderpermission():
     print(folderPermission)
 
 #English version
-    
+
+def file_folder_mgm_menu_en():
+    while True:
+        print("Option 1: Display file permissions")
+        print("Option 2: Display folder permissions")
+        print("Option 3: Change file permissions")
+        print("Option 4: Change folder permissionsns")
+        print("Option 5 : Exit")
+        subOption = input("Please select one of the options : ")
+        if subOption == "1":
+            file_permission_en()
+        elif subOption == "2":
+            folder_permission_en()
+        elif subOption == "3":
+            change_filepermission_en()
+        elif subOption == "4":
+            change_folderpermission_en()
+        elif subOption == "5":
+            print("Exit")
+            break
+        else:
+            print ("Invalid option")  
+
 def file_permission_en():
     fileName = input("Please enter the name of the file : ")
     fileLocation = input("Please enter the file path : ")
