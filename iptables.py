@@ -8,3 +8,5 @@ def block_input_fr():
     action = input ("please enter the action (ACCEPT, DROP, REJECT): ")
     rule = os.system("iptables -A INPUT " + "-s " + source + "--sport " + source_port + "-d " + destinatination + "--dport " + destinatination_port + "-j " + action)
     print(rule)
+
+block_input_fr()
